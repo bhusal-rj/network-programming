@@ -23,6 +23,7 @@ int main(int argc,char *argv[]){
   for (p=res;p != NULL;p=p->ai_next){
     void *addr;
     char *ipver;
+    //AF_INET is the IPv4 address
     if (p->ai_family==AF_INET){
       struct sockaddr_in *ipv4 =(struct sockaddr_in *)p->ai_addr;
       addr = &(ipv4->sin_addr);
