@@ -48,7 +48,7 @@ int main(){
         inet_ntop(AF_INET6, &(addr->sin6_addr), ipstr, sizeof ipstr);
     }
 
-    printf("Got connection from %s\n", ipstr);
+  printf("Got connection from %s\n", ipstr);
   close(socketfd);
   return 0;
 }
