@@ -123,6 +123,7 @@ int main(void)
         printf("server: got connection from %s\n", s);
 
         if (!fork()) {
+            //once socket is open there is no issue closing it
             close(sockfd); 
             if (send(new_fd, "Hello, world!", 13, 0) == -1)
                 perror("send");
